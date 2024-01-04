@@ -22,7 +22,8 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "uuidv4": "^6.2.13"
+    "uuidv4": "^6.2.13",
+    "react-to-print": "^2.14.15"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

@@ -21,7 +21,6 @@ import { useFormData } from "@/app/data-provider";
 
 const Panel = () => {
   const { formData, updateFormData } = useFormData();
-
   const [professionalExperiences, setProfessionalExperiences] = useState([]);
   const [educations, setEducations] = useState([]);
   const [newEducation, setNewEducation] = useState({
@@ -73,7 +72,7 @@ const Panel = () => {
     console.log(formData);
   };
   return (
-    <aside className="">
+    <aside className="p-3">
       <form onSubmit={handleSubmit}>
         <Accordion className="w-full" collapsible type="single">
           <AccordionItem className="accordion" value="personal-info">
