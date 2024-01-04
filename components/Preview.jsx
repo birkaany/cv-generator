@@ -110,9 +110,12 @@ const Preview = () => {
               <ul
                 className={`marker:size-3 marker:text-3xl list-image-arrowRight  list-inside"`}
               >
-                {formData.professionalExperiences.map((experience) => {
+                {formData.professionalExperiences.map((experience, index) => {
                   return (
-                    <li className="py-[10pt] flex items-start gap-2">
+                    <li
+                      key={index}
+                      className="py-[10pt] flex items-start gap-2"
+                    >
                       <ArrowRight className="mt-1" />
                       <div>
                         <h4 className="text-[11pt] font-medium">
@@ -134,9 +137,12 @@ const Preview = () => {
               <ul
                 className={`marker:size-3 marker:text-3xl list-image-arrowRight list-inside"`}
               >
-                {formData.educations.map((education) => {
+                {formData.educations.map((education, index) => {
                   return (
-                    <li className="py-[10pt] flex items-start gap-2">
+                    <li
+                      key={index}
+                      className="py-[10pt] flex items-start gap-2"
+                    >
                       <ArrowRight className="mt-1" />
                       <div>
                         <h4 className="text-[11pt] font-medium">
