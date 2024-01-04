@@ -167,6 +167,15 @@ const Panel = () => {
                   id="notice-period"
                   placeholder="İhbar Süresi"
                   type="text"
+                  value={
+                    formData.noticePeriod !== 0 ? formData.noticePeriod : ""
+                  }
+                  onChange={(e) =>
+                    updateFormData({
+                      ...formData,
+                      noticePeriod: e.target.value,
+                    })
+                  }
                 />
               </div>
             </AccordionContent>
