@@ -32,6 +32,17 @@ const Panel = () => {
     subtitle: "",
   });
   const addNewExperience = () => {
+    updateFormData({
+      ...formData,
+      professionalExperiences: [
+        ...formData.professionalExperiences,
+        {
+          d: uuidv4(),
+          title: newExperience.title,
+          subtitle: newExperience.subtitle,
+        },
+      ],
+    });
     setProfessionalExperiences((prevValues) => [
       ...prevValues,
       {
@@ -47,6 +58,17 @@ const Panel = () => {
     });
   };
   const addNewEducation = () => {
+    updateFormData({
+      ...formData,
+      educations: [
+        ...formData.educations,
+        {
+          d: uuidv4(),
+          title: newEducation.title,
+          subtitle: newEducation.subtitle,
+        },
+      ],
+    });
     setEducations((prevValues) => [
       ...prevValues,
       {
@@ -230,6 +252,10 @@ const Panel = () => {
                               (prev) => prev.id !== experience.id
                             );
                           setProfessionalExperiences(updatedExperiences);
+                          updateFormData({
+                            ...formData,
+                            professionalExperiences: [...updatedExperiences],
+                          });
                         }}
                       >
                         X
@@ -295,6 +321,10 @@ const Panel = () => {
                             (prev) => prev.id !== education.id
                           );
                           setEducations(updatedEducations);
+                          updateFormData({
+                            ...formData,
+                            educations: [...updatedEducations],
+                          });
                         }}
                       >
                         X
@@ -409,11 +439,6 @@ const Panel = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <div className="mt-6">
-          <Button className="w-full" type="submit">
-            Oluştur
-          </Button>
-        </div>
       </form>
     </aside>
   );
