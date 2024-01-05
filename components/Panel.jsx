@@ -134,9 +134,9 @@ const Panel = () => {
                 <Input
                   id="experience-years"
                   placeholder="Deneyim Yılı"
-                  type="number"
+                  type="text"
                   value={
-                    formData.experienceYears !== 0
+                    formData.experienceYears !== ""
                       ? formData.experienceYears
                       : ""
                   }

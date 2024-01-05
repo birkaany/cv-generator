@@ -9,7 +9,7 @@ export default function DataProvider({ children }) {
     title: "",
     address: "",
     age: 0,
-    experienceYears: 0,
+    experienceYears: "",
     salaryExpectation: 0,
     noticePeriod: "",
     personalityColor: "",

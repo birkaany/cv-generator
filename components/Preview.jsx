@@ -53,10 +53,10 @@ const Preview = () => {
           {formData.age !== 0 && (
             <div className="black border-b py-6">
               <h3 className=" mb-2 font-bold uppercase text-[11pt]">Yaş</h3>
-              <p className="text-[10pt]">{formData.age} Yıl</p>
+              <p className="text-[10pt]">{formData.age}</p>
             </div>
           )}
-          {formData.experienceYears !== 0 && (
+          {formData.experienceYears !== "" && (
             <div className="black border-b py-6">
               <h3 className=" mb-2 font-bold uppercase text-[11pt]">
                 Deneyim Yılı
