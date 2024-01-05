@@ -302,7 +302,7 @@ const Panel = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem className="accordion" value="education">
-            <AccordionTrigger>Education</AccordionTrigger>
+            <AccordionTrigger>Eğitim</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-2">
               {educations.map((education, index) => {
                 return (
